@@ -1,0 +1,100 @@
+{
+  "disclaimer": "Synthetic Demonstration Data. Not for clinical use.",
+  "organizations": [
+    {
+      "code": "MOH-DEMO",
+      "name": "Ministry of Health Demonstration Network",
+      "type": "government"
+    },
+    {
+      "code": "UNI-RES",
+      "name": "University Research Partner Network",
+      "type": "research"
+    }
+  ],
+  "facilities": [
+    {
+      "code": "CCHC-04",
+      "name": "Colombo Child Health Clinic",
+      "district": "Colombo",
+      "type": "clinic",
+      "organization_code": "MOH-DEMO"
+    },
+    {
+      "code": "KMCC-01",
+      "name": "Kandy Maternal and Child Clinic",
+      "district": "Kandy",
+      "type": "clinic",
+      "organization_code": "MOH-DEMO"
+    },
+    {
+      "code": "GCNU-02",
+      "name": "Galle Community Nutrition Unit",
+      "district": "Galle",
+      "type": "community_unit",
+      "organization_code": "UNI-RES"
+    }
+  ],
+  "users": [
+    {
+      "email": "admin@demo.local",
+      "full_name": "System Administrator",
+      "role": "system_admin",
+      "facility_code": "CCHC-04"
+    },
+    {
+      "email": "clinic-admin@demo.local",
+      "full_name": "Nirmala Perera",
+      "role": "facility_admin",
+      "facility_code": "CCHC-04"
+    },
+    {
+      "email": "doctor@demo.local",
+      "full_name": "Dr. Sandun Jayawardena",
+      "role": "doctor",
+      "facility_code": "CCHC-04"
+    },
+    {
+      "email": "phm@demo.local",
+      "full_name": "Kumari Silva",
+      "role": "health_worker",
+      "facility_code": "CCHC-04"
+    },
+    {
+      "email": "nutritionist@demo.local",
+      "full_name": "Ishara Fernando",
+      "role": "nutritionist",
+      "facility_code": "CCHC-04"
+    },
+    {
+      "email": "researcher@demo.local",
+      "full_name": "Research Analyst",
+      "role": "researcher",
+      "facility_code": "GCNU-02"
+    },
+    {
+      "email": "phm.kandy@demo.local",
+      "full_name": "Malini Bandara",
+      "role": "health_worker",
+      "facility_code": "KMCC-01"
+    },
+    {
+      "email": "doctor.kandy@demo.local",
+      "full_name": "Dr. Harsha Wijesinghe",
+      "role": "doctor",
+      "facility_code": "KMCC-01"
+    },
+    {
+      "email": "phm.galle@demo.local",
+      "full_name": "Thilini Rathnayake",
+      "role": "health_worker",
+      "facility_code": "GCNU-02"
+    },
+    {
+      "email": "clinic-admin.kandy@demo.local",
+      "full_name": "Asanka Gunasekara",
+      "role": "facility_admin",
+      "facility_code": "KMCC-01"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Child Nutrition Intelligence Platform",
+  "shortName": "CNIP",
+  "subtitle": "AI-Assisted Malnutrition Risk & Progress Monitoring",
+  "tagline": "AI-assisted longitudinal nutritional risk monitoring for paediatric care.",
+  "disclaimer": "AI-assisted decision support. Clinical review required.",
+  "demoDisclaimer": "DEMO MODEL — NOT FOR CLINICAL USE",
+  "researchDisclaimer": "This platform is being developed as part of an undergraduate research study. Research outputs must not be interpreted as clinically validated until appropriate evaluation, ethical approval, institutional approval and clinical validation have been completed.",
+  "research": {
+    "overallProject": "Explainable AI Framework for Early Detection and Personalized Intervention of Childhood Malnutrition in Sri Lanka",
+    "component": "Multimodal Early Detection Model for Paediatric Malnutrition Type and Severity Prediction",
+    "enhancedScope": "Longitudinal Risk & Latent Trajectory Progress Tracking System",
+    "member": "Kavindi T.A.C.",
+    "studentId": "IT22541048",
+    "projectId": "J26-IT-399"
+  },
+  "workflow": ["Detect", "Monitor", "Evaluate", "Alert"]
+}

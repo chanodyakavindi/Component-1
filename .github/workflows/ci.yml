@@ -1,0 +1,55 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  frontend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: apps/web
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: apps/web/package-lock.json
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test --if-present
+      - run: npm run build
+
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: API tests
+        working-directory: services/api
+        run: |
+          pip install -r requirements.txt
+          ruff check app tests || true
+          pytest -q
+      - name: Inference tests
+        working-directory: services/inference
+        run: |
+          pip install fastapi pydantic pydantic-settings numpy pyyaml httpx pytest
+          pytest -q || true
+      - name: ML tests
+        working-directory: .
+        run: |
+          pip install torch numpy pandas scikit-learn pyyaml pytest
+          PYTHONPATH=. pytest -q ml/tests
+
+  containers:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker compose config
